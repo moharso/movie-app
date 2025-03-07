@@ -8,7 +8,7 @@ import { FavoritesProvider } from "./context/FavoritesContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/movie-app">
       <ThemeProvider>
         <FiltersProvider>
           <FavoritesProvider>
