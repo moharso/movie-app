@@ -1,9 +1,9 @@
 import React from "react";
-import GenresFilter from "./GenresFilter";
-import StatusFilter from "./StatusFilter";
-import SortFilter from "./SortFilter";
-import { useFilters } from "../../hooks/useFilters";
-import { STATUS_OPTIONS } from "../../utils/constants";
+import GenresFilter from "../genres-filter/GenresFilter";
+import StatusFilter from "../status-filter/StatusFilter";
+import SortFilter from "../sort-filter/SortFilter";
+import { useFilters } from "../../../hooks/useFilters";
+import { STATUS_OPTIONS } from "../../../utils/constants";
 import styles from "./FilterContainer.module.scss"
 
 interface FilterContainerProps {

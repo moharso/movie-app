@@ -1,13 +1,13 @@
 import React, { useState, useMemo } from "react";
 import { useFetchMovies } from "../../hooks/useFetchMovies";
 import { applyAllFilters } from "../../utils/filterUtils";
-import FiltersContainer from "../../components/filters/FiltersContainer";
+import FiltersContainer from "../../components/filters/filter-container/FiltersContainer";
 import Pagination from "../../components/common/Pagination";
 import Loading from "../../components/common/Loading";
 import ErrorMessage from "../../components/common/ErrorMessage";
 import { useFilters } from "../../hooks/useFilters";
 import { ITEMS_PER_PAGE } from "../../utils/constants";
-import MoviesGrid from "../../components/movies/MoviesGrid";
+import MoviesGrid from "../../components/movies/movie-grid/MoviesGrid";
 import styles from "./Home.module.scss"
 
 const Home: React.FC = () => {

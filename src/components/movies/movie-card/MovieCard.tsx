@@ -1,8 +1,8 @@
 import React from "react";
-import { Movies } from "../../api/types";
-import FavoriteButton from "../common/FavoriteButton";
+import { Movies } from "../../../api/types";
+import FavoriteButton from "../../common/FavoriteButton";
 import { Link } from "react-router-dom";
-import { useFavorites } from "../../hooks/useFavorites";
+import { useFavorites } from "../../../hooks/useFavorites";
 import styles from "./MovieCard.module.scss";
 
 interface MovieCardProps {

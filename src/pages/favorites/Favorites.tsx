@@ -1,6 +1,6 @@
 import React from "react";
 import { useFavorites } from "../../hooks/useFavorites";
-import MovieGrid from "../../components/movies/MoviesGrid";
+import MovieGrid from "../../components/movies/movie-grid/MoviesGrid";
 
 const Favorites: React.FC = () => {
   const { favorites } = useFavorites();

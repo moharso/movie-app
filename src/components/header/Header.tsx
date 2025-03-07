@@ -1,7 +1,7 @@
 import { useTheme } from "../../hooks/useTheme";
 import Navigation from "./navigation/Navigation";
 import styles from "./Header.module.scss";
-import SwitchButton from "../common/SwitchButton";
+import SwitchButton from "../common/switch-button/SwitchButton";
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();

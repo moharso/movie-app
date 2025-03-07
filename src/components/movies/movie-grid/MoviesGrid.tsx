@@ -1,6 +1,6 @@
 import React from "react";
-import { Movies } from "../../api/types";
-import MovieCard from "./MovieCard";
+import { Movies } from "../../../api/types";
+import MovieCard from "../movie-card/MovieCard";
 import styles from "./MovieGrid.module.scss"
 
 interface MovieGridProps {

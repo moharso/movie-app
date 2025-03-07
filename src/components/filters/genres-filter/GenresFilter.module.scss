@@ -1,9 +1,9 @@
-.status-filter {
+.genres {
     position: relative;
     display: inline-block;
   }
   
-  .status-filter-button {
+  .genres-button {
     padding: 8px;
     background-color: #3c3c3c;
     cursor: pointer;
@@ -12,7 +12,7 @@
     border: 2px #a1a1a1 solid;
   }
   
-  .status-filter-dropdown {
+  .genres-dropdown-menu__container {
     position: absolute;
     top: 100%;
     left: 0;
@@ -25,15 +25,16 @@
     min-width: 150px;
     border-radius: 12px;
     padding: 10px;
+    background-color: #2e2d2d;
   }
   
-  .status-filter-item {
+  .filter-bar__dropdown-item {
     padding: 5px 10px;
     display: flex;
     align-items: center;
   }
   
-  .status-filter-item input[type="checkbox"] {
+  .filter-bar__dropdown-item input[type="checkbox"] {
     margin-right: 10px;
   }
   

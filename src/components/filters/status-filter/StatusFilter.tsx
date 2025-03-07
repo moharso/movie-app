@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styles from "./StatusFilter.module.scss"
+import React, { useState, useEffect, useRef } from "react";
+import styles from "./StatusFilter.module.scss";
 
 interface StatusFilterProps {
   selectedStatus: string;
@@ -13,6 +13,7 @@ const StatusFilter: React.FC<StatusFilterProps> = ({
   options,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -26,8 +27,21 @@ const StatusFilter: React.FC<StatusFilterProps> = ({
     }
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className={styles["status-filter"]}>
+    <div className={styles["status-filter"]} ref={dropdownRef}>
       <button className={styles["status-filter-button"]} onClick={toggleDropdown}>
         Status filter
       </button>

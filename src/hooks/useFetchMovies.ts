@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchAllMovies, fetchMovieById } from "../api/movies";
+import { fetchAllMovies, fetchMovieById } from "../api/moviesHandlers";
 import { Movies } from "../api/types";
 
 export const useFetchMovies = () => {
