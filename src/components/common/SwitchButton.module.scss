@@ -1,0 +1,44 @@
+.switch_button {
+    margin-top: -20px;
+    margin-left: 10px;
+    position: relative;
+  }
+  
+  .switch_label {
+    width: 65px;
+    height: 30px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .switch_input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .switch_input:checked + .switch_label {
+    background: #3c3c3c;
+    border: 1px #a1a1a1 solid;
+  }
+  
+  .moon {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+    fill: #757575; 
+    width: 20px;
+    height: 20px;
+    background: transparent;
+  }
+  
+  .switch_input:checked + .switch_label .moon {
+    left: 35px;
+  }
+  

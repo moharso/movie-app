@@ -1,0 +1,39 @@
+.status-filter {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .status-filter-button {
+    padding: 8px;
+    background-color: #3c3c3c;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    border: 2px #a1a1a1 solid;
+  }
+  
+  .status-filter-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+    width: auto; 
+    min-width: 150px;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  
+  .status-filter-item {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .status-filter-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  

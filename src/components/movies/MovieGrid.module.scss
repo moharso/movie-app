@@ -1,0 +1,31 @@
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  padding: 8px;
+  gap: 4px;
+}
+
+.movie-card__container {
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.movie-card__container:hover {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.51);
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .movie-card__container {
+    width: 100%;
+    max-width: 100%;
+  }
+}

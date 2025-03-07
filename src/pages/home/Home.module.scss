@@ -1,0 +1,13 @@
+.pagination-container {
+  left: 40%;
+  position: relative;
+  padding: 8px;
+}
+
+@media (max-width: 480px) {
+  .pagination-container {
+    left: 5%;
+    position: relative;
+    padding: 8px;
+  }
+}
