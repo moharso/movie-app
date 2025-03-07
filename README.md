@@ -1,54 +1,35 @@
-# React + TypeScript + Vite
+# Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A movie application built using Vite, React, TypeScript, and Material UI. The app allows users to explore TV shows, view details, and add favorites using local storage. It also provides features like sorting, filtering, and pagination to enhance the user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home Page**: Display a paginated list of TV shows with title, poster, rating, and genre. Includes filters by genre and status.
+- **Favorites Page**: List all favorited TV shows stored in Local Storage.
+- **Overview Page**: Show detailed information about a selected TV show including poster, full description, rating, genres, and more.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop views.
+- **Dark/Light Mode**: Users can toggle between light and dark themes.
+- **Pagination**: Supports pagination with numbered pages and ellipsis for large data sets.
+- **Sorting**: Sort TV shows by name or premiere date.
+- **Filtering**: Filter TV shows by genre and status.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: 
+  - React
+  - TypeScript
+  - SCSS for additional styling
+  - Material UI for UI components
+  - Vite for bundling and fast development
+- **API**: TVMaze API for fetching TV show data
+- **State Management**: React Context for theme and favorites management
+- **Styling**: Global and component-level SCSS
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To get started, clone the repository and install the dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+```bash
+git clone https://github.com/moharso/movie-app.git
+cd movie-app
+npm install
